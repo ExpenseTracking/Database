@@ -1,15 +1,18 @@
 -- create tables
 CREATE TABLE userRoles (
-    roleId INT PRIMARY KEY,
+    roleId INT PRIMARY KEY AUTO_INCREMENT,
     roleName VARCHAR(10)
 );
 CREATE TABLE users (
-    userId INT PRIMARY KEY,
+    userId INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(20) UNIQUE,
     password VARCHAR(20), -- Storing passwords in plaintext; move to hashing and salting in the future if time allows
     email VARCHAR(30),
     roleId INT,
-    isActive BIT,
+    createdAt DATETIME,
+    updatedAt DATETIME,
+    deletedAt DATETIME,
+    isDeleted BIT,
     FOREIGN KEY (roleId) REFERENCES userRoles(roleId)
 );
 CREATE TABLE transactionTypes (
@@ -17,12 +20,16 @@ CREATE TABLE transactionTypes (
     transactionTypeName VARCHAR(20)
 );
 CREATE TABLE expenses (
-    expenseId INT PRIMARY KEY,
+    expenseId INT PRIMARY KEY AUTO_INCREMENT,
     userId INT,
     transactionTypeId INT,
     amount DECIMAL(10, 2),
     date DATETIME,
     description VARCHAR(255),
+    createdAt DATETIME,
+    updatedAt DATETIME,
+    deletedAt DATETIME,
+    isDeleted BIT,
     FOREIGN KEY (userId) REFERENCES users(userId),
     FOREIGN KEY (transactionTypeId) REFERENCES transactionTypes(transactionTypeId)
 );
