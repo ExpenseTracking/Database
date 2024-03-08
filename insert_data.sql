@@ -1,19 +1,19 @@
 -- insert userRoles
-INSERT INTO userRoles (roleId, roleName) VALUES (1, 'Admin');
-INSERT INTO userRoles (roleId, roleName) VALUES (2, 'Accountant');
-INSERT INTO userRoles (roleId, roleName) VALUES (3, 'User');
+INSERT INTO userRoles (roleName) VALUES ('Admin');
+INSERT INTO userRoles (roleName) VALUES ('Accountant');
+INSERT INTO userRoles (roleName) VALUES ('User');
 
 -- insert transactionTypes
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (1, 'Transportation');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (2, 'Groceries');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (3, 'Subscriptions');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (4, 'Memberships');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (5, 'Utilities');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (6, 'Phone Bill');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (7, 'Insurance');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (8, 'Rent');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (9, 'Mortgage');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (10, 'Healthcare');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (11, 'Entertainment');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (12, 'Dining Out');
-INSERT INTO transactionTypes (transactionTypeId, transactionTypeName) VALUES (13, 'Miscellaneous');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Transportation');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Groceries');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Subscriptions');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Memberships');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Utilities');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Phone Bill');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Insurance');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Rent');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Mortgage');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Healthcare');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Entertainment');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Dining Out');
+INSERT INTO transactionTypes (transactionTypeName) VALUES ('Miscellaneous');

@@ -1,10 +1,10 @@
 -- create tables
 CREATE TABLE userRoles (
-    roleId INT PRIMARY KEY AUTO_INCREMENT,
+    roleId INT IDENTITY (1, 1) PRIMARY KEY,
     roleName VARCHAR(10)
 );
 CREATE TABLE users (
-    userId INT PRIMARY KEY AUTO_INCREMENT,
+    userId INT IDENTITY (1, 1) PRIMARY KEY,
     username VARCHAR(20) UNIQUE,
     password VARCHAR(20), -- Storing passwords in plaintext; move to hashing and salting in the future if time allows
     email VARCHAR(30),
@@ -16,11 +16,11 @@ CREATE TABLE users (
     FOREIGN KEY (roleId) REFERENCES userRoles(roleId)
 );
 CREATE TABLE transactionTypes (
-    transactionTypeId INT PRIMARY KEY,
+    transactionTypeId INT IDENTITY (1, 1) PRIMARY KEY,
     transactionTypeName VARCHAR(20)
 );
 CREATE TABLE expenses (
-    expenseId INT PRIMARY KEY AUTO_INCREMENT,
+    expenseId INT IDENTITY (1, 1) PRIMARY KEY,
     userId INT,
     transactionTypeId INT,
     amount DECIMAL(10, 2),
