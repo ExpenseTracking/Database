@@ -17,7 +17,8 @@ CREATE TABLE users (
 );
 CREATE TABLE transactionTypes (
     transactionTypeId INT IDENTITY (1, 1) PRIMARY KEY,
-    transactionTypeName VARCHAR(20)
+    transactionTypeName VARCHAR(20),
+	isDeleted BIT
 );
 CREATE TABLE expenses (
     expenseId INT IDENTITY (1, 1) PRIMARY KEY,
