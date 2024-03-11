@@ -1,7 +1,8 @@
 -- create tables
 CREATE TABLE userRoles (
     roleId INT IDENTITY (1, 1) PRIMARY KEY,
-    roleName VARCHAR(10)
+    roleName VARCHAR(10) UNIQUE,
+	isDeleted BIT
 );
 
 CREATE TABLE users (
